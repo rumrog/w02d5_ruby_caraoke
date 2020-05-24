@@ -13,7 +13,7 @@ class GuestTest < MiniTest::Test
 		@guest2 = Guest.new("Bob", 5.00)
 	end
 
-	def test_room_name_and_wallet()
+	def test_guest_name_and_wallet()
 		assert_equal("Max", @guest1.name())
 		assert_equal(20.00, @guest1.wallet())
 	end

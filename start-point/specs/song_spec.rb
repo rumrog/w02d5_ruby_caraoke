@@ -14,8 +14,8 @@ class SongTest < MiniTest::Test
 		@song3 = Song.new("Queen - Another One Bites the Dust")
 	end
 
-	# def test_song_name()
-	# 	assert_equal("Queen - We Will Rock You", @song1.name())
-	# end
+	def test_song_name()
+		assert_equal("Queen - We Will Rock You", @song1.name())
+	end
 
 end
