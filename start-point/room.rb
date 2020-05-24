@@ -51,4 +51,8 @@ class Room
     end
   end
 
+  def check_out(room)
+    return @guests.clear
+  end
+
 end
