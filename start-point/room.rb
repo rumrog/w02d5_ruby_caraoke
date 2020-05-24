@@ -15,4 +15,12 @@ class Room
     return @guests.include?(guest)
   end
 
+  def room_has_playlist(song)
+    return @playlist.include?(song)
+  end
+
+  def guest_can_afford_fee(guest, room)
+    return guest.wallet >= room.fee
+  end
+
 end

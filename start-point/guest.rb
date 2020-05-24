@@ -7,10 +7,5 @@ class Guest
 		@wallet = wallet
 		@fav_song = fav_song
 	end
-
-
-	# def buy(drink)
-	#   @wallet -= drink.price()
-	# end
   
 end

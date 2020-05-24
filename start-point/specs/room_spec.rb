@@ -33,7 +33,20 @@ class RoomTest < MiniTest::Test
 	end
 
 	def test_room_has_guests()
-		assert_equal(2, @room.guests().count())
+		assert_equal(2, @room.guests().size())
+	end
+
+
+	def test_room_has_playlist()
+		assert_equal(2, @room.playlist().size())
+	end
+
+	def test_guest_can_afford_fee__sufficient_funds
+		assert_equal(true, @room.guest_can_afford_fee(@guest1, @room))
+	end
+
+	def test_guest_can_afford_fee__insufficient_funds
+		assert_equal(false, @room.guest_can_afford_fee(@guest2, @room))
 	end
 
 end
