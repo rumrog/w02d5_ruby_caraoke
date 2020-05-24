@@ -26,5 +26,9 @@ class Room
   def room_has_room(room)
     return room.guests().size() <= @capacity
   end
-  
+
+  def remove_guest_cash(guest, room)
+    return guest.wallet - room.fee
+  end
+
 end

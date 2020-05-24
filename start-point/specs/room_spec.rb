@@ -57,4 +57,12 @@ class RoomTest < MiniTest::Test
 		assert_equal(true, @room.room_has_room(@room))
 	end
 
+	def test_remove_guest_cash()
+		assert_equal(10.00, @room.remove_guest_cash(@guest1, @room))
+	end
+	
+	# def test_add_till_cash()
+	# 	assert_equal(110.00, @room.add_till_cash(@guest1, @room))
+	# end
+
 end
