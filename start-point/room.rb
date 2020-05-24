@@ -56,7 +56,6 @@ class Room
   end
 
   def find_fav_song(guest)
-    @playlist.find { |song| song == guest.fav_song }
-    return "Whoo!"
+    @playlist.find { |song| return "Whoo!" if song == guest.fav_song }
   end
 end

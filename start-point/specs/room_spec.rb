@@ -89,6 +89,8 @@ class RoomTest < MiniTest::Test
 	end
 	
 	def test_find_fav_song()
+		@room.add_song(@song1)
+		@room.add_song(@song2)
 		assert_equal("Whoo!", @room.find_fav_song(@guest1))
 	end
 	
