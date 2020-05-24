@@ -15,7 +15,6 @@ class GuestTest < MiniTest::Test
 		@guest4 = Guest.new("Andrew", 50.00, "Black Sabbath - Black Sabbath")
 		@guest5 = Guest.new("Freddy", 25.00, "Daft Punk - Harder, Better, Faster, Stronger")
 
-		@room = Room.new("E40", [@guest1, @guest2], 2, [@song1, @song2], 100.00, 10.00)
 	end
 
 	def test_guest_has_name_wallet_and_fav_song()

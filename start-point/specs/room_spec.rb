@@ -86,6 +86,10 @@ class RoomTest < MiniTest::Test
 	def test_check_out()
 		@room.check_out(@room)
 		assert_equal(0, @room.guests().size())
-  end
-
+	end
+	
+	def test_find_fav_song()
+		assert_equal("Whoo!", @room.find_fav_song(@guest1))
+	end
+	
 end
