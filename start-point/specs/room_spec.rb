@@ -75,12 +75,12 @@ class RoomTest < MiniTest::Test
 		assert_equal(1, @room.playlist().size())
   end
 
-	# def test_check_in__can_enter_the_session()
-	# 	@room.check_in(@guest1, @room)
-	# 	assert_equal(true, @room.room_has_room(@room))
-	# 	assert_equal(10.00, @room.remove_guest_cash(@guest1, @room))
-	# 	assert_equal(110.00, @room.add_till_cash(@room))
-	# 	assert_equal(1, @room.guests().size())
-  # end
+	def test_check_in__can_enter()
+		@room.check_in(@guest1, @room)
+		assert_equal(true, @room.room_has_room(@room))
+		assert_equal(10.00, @room.remove_guest_cash(@guest1, @room))
+		assert_equal(110.00, @room.add_till_cash(@room))
+		assert_equal(1, @room.guests().size())
+  end
 	
 end
