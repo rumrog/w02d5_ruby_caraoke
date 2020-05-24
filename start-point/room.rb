@@ -23,4 +23,8 @@ class Room
     return guest.wallet >= room.fee
   end
 
+  def room_has_room(room)
+    return room.guests().size() <= @capacity
+  end
+  
 end
