@@ -31,4 +31,8 @@ class Room
     return guest.wallet - room.fee
   end
 
+  def add_till_cash(room)
+    return room.fee + room.till
+  end
+
 end
