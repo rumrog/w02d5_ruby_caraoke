@@ -10,6 +10,8 @@ class Room
     @fee = fee
   end
 
+
+  
 end
 
 
