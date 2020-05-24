@@ -22,7 +22,7 @@ class RoomTest < MiniTest::Test
 		@guest4 = Guest.new("Andrew", 50.00, @song4)
 		@guest5 = Guest.new("Freddy", 25.00, @song5)
 		# Rooms List
-		@room = Room.new("E40", [@guest1, @guest2], 2, [@song1, @song2], 100.00, 10.00)
+		@room = Room.new("E40", [], 2, [], 100.00, 10.00)
 	end
 		
 	def test_room_has_name_capactity_till_and_fee()
@@ -33,12 +33,12 @@ class RoomTest < MiniTest::Test
 	end
 
 	def test_room_has_guests()
-		assert_equal(2, @room.guests().size())
+		assert_equal(0, @room.guests().size())
 	end
 
 
 	def test_room_has_playlist()
-		assert_equal(2, @room.playlist().size())
+		assert_equal(0, @room.playlist().size())
 	end
 
 	def test_guest_can_afford_fee__sufficient_funds()
@@ -64,5 +64,23 @@ class RoomTest < MiniTest::Test
 	def test_add_till_cash()
 		assert_equal(110.00, @room.add_till_cash(@room))
 	end
+
+	def test_add_guest()
+		@room.add_guest(@guest1)
+		assert_equal(1, @room.guests().size())
+  end
+
+	# def test_add_song()
+	# 	@room.add_song(@song1)
+	# 	assert_equal(1, @room.playlist().size())
+  # end
+
+	# def test_check_in__can_enter_the_session()
+	# 	@room.check_in(@guest1, @room)
+	# 	assert_equal(true, @room.room_has_room(@room))
+	# 	assert_equal(10.00, @room.remove_guest_cash(@guest1, @room))
+	# 	assert_equal(110.00, @room.add_till_cash(@room))
+	# 	assert_equal(1, @room.guests().size())
+  # end
 	
 end

@@ -35,4 +35,20 @@ class Room
     return room.fee + room.till
   end
 
+  def add_guest(guest)
+    return @guests << guest
+  end
+
+  # def add_song(song)
+  #   return @playlist << song
+  # end
+
+  # def check_in(guest, room)
+  #   if room_has_room(room) && guest_can_afford_fee(guest, room)
+  #     remove_guest_cash(guest, room)
+  #     add_till_cash(room)
+  #     add_guest(guest)
+  #   end
+  # end
+
 end
