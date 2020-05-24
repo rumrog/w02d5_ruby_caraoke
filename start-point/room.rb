@@ -11,7 +11,5 @@ class Room
   end
 
 
-  
+
 end
-
-

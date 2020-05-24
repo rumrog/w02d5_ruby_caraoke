@@ -10,12 +10,13 @@ class RoomTest < MiniTest::Test
 
 	def setup
 		# Guests List
-		@guest1 = Guest.new("Max", 20.00)
-		@guest2 = Guest.new("Bob", 5.00)
+		@guest1 = Guest.new("Max", 20.00, "Queen - We Will Rock You")
+		@guest2 = Guest.new("Bob", 5.00, "Queen - Don't Stop Me Now")
+		@guest3 = Guest.new("Jil", 10.00, "Queen - Another One Bites the Dust")
+
 		# Playlist
 		@song1 = Song.new("Queen - We Will Rock You")
 		@song2 = Song.new("Queen - Don't Stop Me Now")
-		@song3 = Song.new("Queen - Another One Bites the Dust")
 		# Rooms List
 		@room = Room.new("E40", [@guest1, @guest2], [@song1, @song2], 100, 10.00)
 	end
