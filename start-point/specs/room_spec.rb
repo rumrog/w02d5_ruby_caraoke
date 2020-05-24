@@ -70,10 +70,10 @@ class RoomTest < MiniTest::Test
 		assert_equal(1, @room.guests().size())
   end
 
-	# def test_add_song()
-	# 	@room.add_song(@song1)
-	# 	assert_equal(1, @room.playlist().size())
-  # end
+	def test_add_song()
+		@room.add_song(@song1)
+		assert_equal(1, @room.playlist().size())
+  end
 
 	# def test_check_in__can_enter_the_session()
 	# 	@room.check_in(@guest1, @room)
