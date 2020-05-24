@@ -25,11 +25,15 @@ class RoomTest < MiniTest::Test
 		@room = Room.new("E40", [@guest1, @guest2], 2, [@song1, @song2], 100.00, 10.00)
 	end
 		
-	def test_room_name_capactity_till_and_fee()
+	def test_room_has_name_capactity_till_and_fee()
 		assert_equal("E40", @room.name())
 		assert_equal(2, @room.capacity())
 		assert_equal(100.00, @room.till())
 		assert_equal(10.00, @room.fee())
+	end
+
+	def test_room_has_guests()
+		assert_equal(2, @room.guests().count())
 	end
 
 end

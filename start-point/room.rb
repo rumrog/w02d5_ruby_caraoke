@@ -11,5 +11,8 @@ class Room
     @fee = fee
   end
 
+  def room_has_guests(guest)
+    return @guests.include?(guest)
+  end
 
 end

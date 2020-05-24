@@ -16,7 +16,7 @@ class SongTest < MiniTest::Test
 		@song5 = Song.new("Daft Punk - Harder, Better, Faster, Stronger")
 	end
 
-	def test_song_name()
+	def test_song_has_name()
 		assert_equal("The Rolling Stones - Paint It Black", @song1.name())
 	end
 

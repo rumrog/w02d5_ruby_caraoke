@@ -16,10 +16,10 @@ class GuestTest < MiniTest::Test
 		@guest5 = Guest.new("Freddy", 25.00, "Daft Punk - Harder, Better, Faster, Stronger")
 	end
 
-	def test_guest_name_wallet_and_fav_song()
+	def test_guest_has_name_wallet_and_fav_song()
 		assert_equal("Max", @guest1.name())
 		assert_equal(20.00, @guest1.wallet())
 		assert_equal("The Rolling Stones - Paint It Black", @guest1.fav_song)
 	end
-    
+		
 end
